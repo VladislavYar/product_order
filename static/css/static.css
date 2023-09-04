@@ -1,0 +1,235 @@
+:root {
+    --color-body: #25463b;
+    --text-color: #E8A236;
+    --min-width: 100px;
+    --standart-border-radius: 5px;
+    --standart-margin-top: 1%;
+  }
+
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: var(--color-body);
+  }
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    font-weight: bold;
+}
+
+
+table {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: var(--standart-margin-top);
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th {
+    text-align: center;
+    background-color: #212121;
+    color: var(--text-color);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+td {
+    text-align: center;
+    border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+td:last-child {
+    width: 30px;
+    padding-left: 2px;
+    background-color: var(--color-body);
+    border-bottom: 1px solid var(--color-body);
+}
+
+th:last-child {
+    width: 30px;
+    padding-left: 2px;
+    background-color: var(--color-body);
+}
+
+
+#set-product, #place-order  {
+    width: 15%;
+    max-width: 200px;
+    min-width: var(--min-width);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: var(--standart-margin-top);
+    border-radius: var(--standart-border-radius);
+    font-size: 95%;
+    font-weight: bold;
+    background-color: #212121;
+    color: var(--text-color);
+}
+
+#set-product:hover, #place-order:hover {
+    color: #e79417;
+    background-color: black;
+}
+
+#set-product:disabled, #place-order:disabled  {
+    background-color: #585555;
+    color: #dbaf6d;
+}
+
+label {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: var(--standart-margin-top);
+    color: var(--text-color);
+}
+
+select {
+    width: 20%;
+    max-width: 250px;
+    min-width: var(--min-width);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: var(--standart-border-radius);
+}
+
+#count {
+    width: 19%;
+    max-width: 240px;
+    min-width: 92px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: var(--standart-border-radius);
+}
+
+#count:not([disabled]):hover, select:not([disabled]):hover {
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    border-radius: var(--standart-border-radius);
+}
+
+hr {
+    display:block;
+    width: 20%;     
+    background-color: black;
+    height: 1px;
+  }
+
+.delete:hover {
+    background-color: brown;
+    border-radius: 3px;
+}
+
+footer {
+    position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+    background-color: white;
+    text-align: center;
+}
+
+@keyframes appearance {
+    from {top: -60px;}
+    to {top: 0px;}
+}
+
+@keyframes revers_appearance {
+    from {top: 0px;}
+    to {top: -60px;}
+}
+
+.active {
+    animation-name: appearance;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+.deactivate {
+    animation-name: revers_appearance;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+article {
+    position: absolute;
+    margin-left: 10px;
+    left: 60%;
+    top: -60px;
+    width: 30%;
+    min-width: 180px;
+    max-width: 300px;
+    height: 40px;
+    background-color: white;
+}
+
+article p {
+    width: 30%;
+    max-width: 300px;
+    margin-top: 2px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+    white-space: nowrap;
+    text-align: start;
+    font-size: 15px;
+}
+
+@keyframes disappearing-message {
+    from {opacity: 1.0;}
+    to {opacity: 0.0;}
+}
+
+@keyframes output-message {
+    from {opacity: 0.0;}
+    to {opacity: 1.0;}
+}
+
+.output-message {
+    animation-name: output-message;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
+
+.disappearing-message {
+    animation-name: disappearing-message;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
+
+#message-error {
+    position: absolute;
+    opacity: 0.0;
+    width: 20%;
+    max-width: 200px;
+    min-width: 130px;
+    background-color: rgba(96, 7, 46, 0.2);
+    border-radius: 10px;
+    border: 3px solid #751111;
+}
+
+#message-error p {
+    color: #c01616;
+    margin: 3px;
+    font-size: 15px;
+}
+
+#message-save-order {
+    opacity: 0.0;
+    width: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    background-color: rgba(78, 110, 55, 0.2);
+    border-radius: 10px;
+    border: 3px solid #034d05;
+}
+
+#message-save-order p {
+    color: #157c10;
+    margin: 3px;
+    font-size: 15px;
+}
